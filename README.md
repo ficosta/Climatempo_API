@@ -1,6 +1,7 @@
-# Climatempo_API
+# Climatempo API
 Wrapper Python para consumo da API da Climatempo
 
+[![Docs](https://readthedocs.org/projects/Climatempo_API/badge/?style=flat)](https://climatempo-api.readthedocs.io/en/latest/)
 [![Build Status](https://travis-ci.org/ficosta/Climatempo_API.svg?branch=master)](https://travis-ci.org/ficosta/Climatempo_API)
 [![Updates](https://pyup.io/repos/github/ficosta/Climatempo_API/shield.svg)](https://pyup.io/repos/github/ficosta/Climatempo_API/)
 [![Python 3](https://pyup.io/repos/github/ficosta/Climatempo_API/python-3-shield.svg)](https://pyup.io/repos/github/ficosta/Climatempo_API/)
