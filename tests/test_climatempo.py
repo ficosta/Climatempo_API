@@ -3,7 +3,7 @@ from climatempo_api.climatempo import BASE_URL, VERSION
 
 
 def test_criar_climatempo():
-    climatempo = Climatempo()
+    climatempo = Climatempo("***")
     assert climatempo is not None
 
 

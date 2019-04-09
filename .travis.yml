@@ -5,6 +5,6 @@ install:
   - pip install -q -r requirements-dev.txt codecov
 script:
   - flake8
-  - pytest climatempo_api --cov=climatempo_api
+  - pytest tests --cov=climatempo_api
 after_success:
   - codecov
