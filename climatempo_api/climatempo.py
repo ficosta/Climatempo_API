@@ -1,11 +1,12 @@
 import requests
+from . import CLIMATEMPO_TOKEN
 
 BASE_URL = "http://apiadvisor.climatempo.com.br/api"
 VERSION = "/v1"
 
 
 class Climatempo():
-    def __init__(self, token: str):
+    def __init__(self, token: str = CLIMATEMPO_TOKEN):
         self.token = token
 
     # === Climate ---
