@@ -1,4 +1,5 @@
 import os
+
 CLIMATEMPO_TOKEN = os.environ.get('CLIMATEMPO_TOKEN', None)
 
 

@@ -1,5 +1,6 @@
 import requests
 from . import CLIMATEMPO_TOKEN
+from urllib.parse import quote
 
 BASE_URL = "http://apiadvisor.climatempo.com.br/api"
 VERSION = "/v1"
@@ -53,7 +54,7 @@ class Climatempo():
         endpoint = self._formatar_endpoint(f"/locale/city/{id}")
         return self._requisitar_dados(endpoint)
 
-    def busca_cidade_nome(self, cidade: str = "", estado: str = ""):
+    def busca_cidade_nome(self, cidade: str, estado: str):
         """
         Retorna os dados de uma cidade para a cidade e o estado fornecido.
 
@@ -61,8 +62,9 @@ class Climatempo():
         :param estado:
         :return: Dicionario com os dados
         """
-
+        cidade = quote(cidade)
         endpoint = self._formatar_endpoint(f"/locale/city?name={cidade}&state={estado}")
+        print(endpoint)
         return self._requisitar_dados(endpoint)
 
     # --- Weather ---
@@ -78,7 +80,7 @@ class Climatempo():
         return self._requisitar_dados(endpoint)
 
     def _formatar_endpoint(self, endpoint: str) -> str:
-        return f'{BASE_URL}{VERSION}{endpoint}?token={self.token}'
+        return f'{BASE_URL}{VERSION}{endpoint}&token={self.token}'
 
     def _requisitar_dados(self, endpoint: str) -> dict:
         return requests.get(endpoint).json()
