@@ -1,5 +1,4 @@
-from climatempo_api.climatempo import Climatempo
-from climatempo_api.climatempo import BASE_URL, VERSION
+from climatempo_api.climatempo import Climatempo, BASE_URL, VERSION
 import os
 
 
@@ -23,7 +22,7 @@ def test_busca_cidade_id():
     assert response['id'] == 3477, "ID da cidade de SP"
 
 
-def test_busca_cidade_id():
+def test_busca_cidade_nome():
     climatempo = Climatempo()
     response = climatempo.busca_cidade_nome("São Paulo", "SP")
     assert response[0]['id'] == 3477, "ID da cidade de SP"
