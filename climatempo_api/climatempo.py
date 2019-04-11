@@ -80,7 +80,8 @@ class Climatempo():
         return self._requisitar_dados(endpoint)
 
     def _formatar_endpoint(self, endpoint: str) -> str:
-        return f'{BASE_URL}{VERSION}{endpoint}&token={self.token}'
+        separador = "?" if not "?" in endpoint else separador = "&"
+        return f'{BASE_URL}{VERSION}{endpoint}{separador}token={self.token}'
 
     def _requisitar_dados(self, endpoint: str) -> dict:
         return requests.get(endpoint).json()
