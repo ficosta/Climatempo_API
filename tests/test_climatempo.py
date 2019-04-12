@@ -26,3 +26,27 @@ def test_busca_cidade_nome():
     climatempo = Climatempo()
     response = climatempo.busca_cidade_nome("São Paulo", "SP")
     assert response[0]['id'] == 3477, "ID da cidade de SP"
+
+
+def test_chuva_climatica():
+    climatempo = Climatempo()
+    response = climatempo.chuva_climatica(3477)
+    assert response['id'] == 3477, "ID da cidade de SP"
+
+
+def test_previsao_15_dias():
+    climatempo = Climatempo()
+    response = climatempo.previsao_15_dias(3477)
+    assert response['id'] == 3477, "ID da cidade de SP"
+
+
+def previsao_72_horas():
+    climatempo = Climatempo()
+    response = climatempo.previsao_72_horas(3477)
+    assert response['id'] == 3477, "ID da cidade de SP"
+
+
+def tempo_momento():
+    climatempo = Climatempo()
+    response = climatempo.tempo_momento(3477)
+    assert response['id'] == 3477, "ID da cidade de SP"
