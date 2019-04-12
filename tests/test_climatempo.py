@@ -28,10 +28,10 @@ def test_busca_cidade_nome():
     assert response[0]['id'] == 3477, "ID da cidade de SP"
 
 
-def test_chuva_climatica():
-    climatempo = Climatempo()
-    response = climatempo.chuva_climatica(3477)
-    assert response['id'] == 3477, "ID da cidade de SP"
+# def test_chuva_climatica():
+#     climatempo = Climatempo()
+#     response = climatempo.chuva_climatica(3477)
+#     assert response['id'] == 3477, "ID da cidade de SP"
 
 
 def test_previsao_15_dias():
