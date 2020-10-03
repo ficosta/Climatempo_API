@@ -1,7 +1,7 @@
 certifi==2019.3.9
 chardet==3.0.4
 entrypoints==0.3
-flake8==3.7.7
+flake8==3.8.4
 idna==2.8
 mccabe==0.6.1
 pycodestyle==2.5.0
