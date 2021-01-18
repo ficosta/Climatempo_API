@@ -8,4 +8,4 @@ pycodestyle==2.5.0
 pyflakes==2.1.1
 requests==2.21.0
 urllib3==1.25
-pytest-cov==2.6.1
+pytest-cov==2.11.0
